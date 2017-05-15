@@ -140,6 +140,22 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\AMuxControl.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\AMuxControl.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\AMuxControl_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_VPHS.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_VPHS.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_VPHS_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_VPHS_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_VMAG.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_VMAG.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_VMAG_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_VMAG_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_IRQ.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_IRQ.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_intClock.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_intClock.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\PSoC Projects\antenna_analyzer\antenna_analyzer.cydsn\Export\ARM_GCC_Generic">

@@ -32,8 +32,9 @@ void execute_input_str(char * input_str);
 
 int main()
 {
-//    AMux_Start();
-//    AMux_Select(amux_chan);
+    ADC_Start();
+    ADC_StartConvert();
+    
     LED_Write(1u);
     
     // Enable serial mode on AD9850 DDS module
@@ -153,10 +154,14 @@ void execute_input_str(char * input_str){
         "  set\r\n"
         "  get\r\n"
         "property:\r\n"
-        "  f: frequency\r\n"
+        "  f: frequency from AD850 DDS\r\n"
         "  s: switch resistor bridge input\r\n"
         "    1: ref\r\n"
         "    2: antenna\r\n"
+        "  m: VMAG reading from AD8302 [get only]\r\n"
+        "    multiply with (1.8*2/4096) to convert to Volts\r\n"
+        "  p: VPHS reading from AD8302 [get only]\r\n"
+        "    multiply with (1.8*2/4096) to convert to Volts\r\n"
         ;
         char option[OPTION_LEN] = "";
         extract_first_word(input_str+4, option, OPTION_LEN);
@@ -168,7 +173,9 @@ void execute_input_str(char * input_str){
         
         if(strcmp(option, "get")==0){
             if(property=='f') send_uint(AMuxControl_Read());
-            if(property=='s') send_uint(amux_chan);
+            else if(property=='s') send_uint(amux_chan);
+            else if(property=='m') send_uint((uint)ADC_GetResult16(0u));
+            else if(property=='p') send_uint((uint)ADC_GetResult16(1u));
             else UART_SpiUartPutArray(cmd_format, strlen(cmd_format));
         }
         else if(strcmp(option, "set")==0){
